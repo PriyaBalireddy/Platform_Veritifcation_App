@@ -16,11 +16,17 @@ The app validates SSL certificate details such as issuer, organization name, exp
 
 ## 📂 Project Structure
 platform-verification-app/
+
 ├── public/
+
 │ └── index.html # Frontend (UI)
+
 ├── server.js # Backend (Express server)
+
 ├── package.json # Project metadata & dependencies
+
 ├── .gitignore # Ignored files/folders
+
 └── README.md # Project documentation
 
 ---
