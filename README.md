@@ -29,43 +29,43 @@ Built with **React.js**, **Node.js**, and **Express.js**.
 git clone https://github.com/your-username/platform-verification-app.git
 cd platform-verification-app
 
-**### 2. Install dependencies**
+###** 2. Install dependencies**
 
-For backend:
+**For backend:**
 ```bash
 cd backend
 npm install
 
 
-For frontend:
+**For frontend:**
 ```bash
 cd frontend
 npm install
 
-3. Run the app
+**3. Run the app**
 
-Start backend:
+**Start backend:**
 ```bash
 cd backend
 npm start
 
 
-Start frontend:
+**Start frontend:**
 ```bash
 cd frontend
 npm start
 
-🔗 API Usage
-Endpoint:
+**🔗 API Usage
+Endpoint:**
 ```bash
 /check
 
-Request:
+**Request:**
 ```bash
 GET /check?url=example.com
 
 
-Response Example:
+**Response Example:**
 ```bash
 {
   "host": "example.com",
@@ -75,22 +75,22 @@ Response Example:
   "organization": "Example Organization"
 }
 
-📸 Screenshots
+**📸 Screenshots**
 
 (Add screenshots or GIFs of your app here)
 
-🙌 Contributing
+**🙌 Contributing**
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-📄 License
+**📄 License**
 
 This project is licensed under the MIT License.
 
 
 ---
 
-👉 Save this as **`README.md`** in your project root, then run:
+**👉 Save this as **`README.md`** in your project root, then run:**
 
 ```bash
 git add README.md
