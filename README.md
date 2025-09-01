@@ -53,6 +53,7 @@ platform-verification-app/
    ```bash
    node_modules
    .env
+
 ---
 
 ## 🛠️ Tech Stack
