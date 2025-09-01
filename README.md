@@ -14,6 +14,13 @@ The app validates SSL certificate details such as issuer, organization name, exp
 
 ---
 
+## 🛠️ Tech Stack
+- **Backend:** Node.js, Express  
+- **Frontend:** HTML, CSS, JavaScript (inside `public/`)  
+- **Security Check:** TLS/SSL validation  
+
+---
+
 ## 📂 Project Structure
 platform-verification-app/
 
