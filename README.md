@@ -51,8 +51,8 @@ platform-verification-app/
 
   Make sure you have a .gitignore file in your project root with:
    ```bash
-   node_modules
-   .env
+    node_modules
+    .env
 
 ---
 
