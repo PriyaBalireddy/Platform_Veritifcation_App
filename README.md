@@ -1,98 +1,46 @@
-# Platform Verification App 🔒✅
+# 🌐 Platform Verification App
 
-A full-stack web application that verifies the authenticity of online platforms by checking their SSL certificates and other trust indicators.  
-Built with **React.js**, **Node.js**, and **Express.js**.
+A simple Node.js + Express application that verifies platforms by checking SSL certificates.  
+The app validates SSL certificate details such as issuer, organization name, expiry date, and decides whether a platform is **real or fake**.
 
 ---
 
 ## 🚀 Features
-- ✅ SSL certificate validation (issuer, expiry date, organization, etc.)
-- ✅ Real/Fake platform decision based on SSL status
-- ✅ Clean and modern UI with modal-based details
-- ✅ Node.js + Express backend for API requests
-- ✅ React frontend for interactive results
+- ✅ Check SSL certificate validity  
+- ✅ Display certificate issuer (if present)  
+- ✅ Show expiry date in `DD-MM-YYYY` format  
+- ✅ Simple and clean UI (served via Express)  
+- ✅ Runs entirely in a single `server.js` file  
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, TailwindCSS (or your CSS setup)
-- **Backend:** Node.js, Express.js
-- **API:** SSL Labs API (or custom SSL checker)
-- **Version Control:** Git & GitHub
-
----
-
-## 📦 Installation & Setup
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/platform-verification-app.git
-cd platform-verification-app
-
-###** 2. Install dependencies**
-
-**For backend:**
-```bash
-cd backend
-npm install
-
-
-**For frontend:**
-```bash
-cd frontend
-npm install
-
-**3. Run the app**
-
-**Start backend:**
-```bash
-cd backend
-npm start
-
-
-**Start frontend:**
-```bash
-cd frontend
-npm start
-
-**🔗 API Usage
-Endpoint:**
-```bash
-/check
-
-**Request:**
-```bash
-GET /check?url=example.com
-
-
-**Response Example:**
-```bash
-{
-  "host": "example.com",
-  "valid": true,
-  "issuer": "DigiCert Inc",
-  "expiryDate": "2025-12-31",
-  "organization": "Example Organization"
-}
-
-**📸 Screenshots**
-
-(Add screenshots or GIFs of your app here)
-
-**🙌 Contributing**
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-**📄 License**
-
-This project is licensed under the MIT License.
+## 📂 Project Structure
+platform-verification-app/
+│── node_modules/ # Ignored by git
+│── .gitignore # Prevents node_modules and env files from being pushed
+│── package.json # Dependencies and scripts
+│── server.js # Main application file
+│── README.md # Project documentation
 
 
 ---
 
-**👉 Save this as **`README.md`** in your project root, then run:**
+## 🛠️ Installation & Setup
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/platform-verification-app.git
+   cd platform-verification-app
+2.**Install dependencies**
+   ```bash
+   npm install
+3.**Run the app**
+   ```bash
+  node server.js
+
+**🛑 .gitignore (Important!)**
+
+Make sure you have a .gitignore file in your project root with:
 ```bash
-git add README.md
-git commit -m "Add README file"
-git push origin main
+node_modules
+.env
