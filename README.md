@@ -30,24 +30,23 @@ platform-verification-app/
 └── README.md # Project documentation
 
 ---
-
-## 🛠️ Installation & Setup
+## 🚀 Getting Started 
+### 🛠️ Installation & Setup
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/platform-verification-app.git
    cd platform-verification-app
 2.**Install dependencies**
-   ```bash
-    npm install
-3. **Run the app**
-   ```bash
-   node server.js
+```bash
+npm install
+3. Run the app
+```bash
+node server.js
 
-## 🛑 .gitignore (Important!)
+### 🛑 .gitignore (Important!)
 
-   Make sure you have a .gitignore file in your project root with:
-
-   ```bash
-   node_modules
-   .env
+Make sure you have a .gitignore file in your project root with:
+```bash
+node_modules
+.env
