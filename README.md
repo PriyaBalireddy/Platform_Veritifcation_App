@@ -47,36 +47,12 @@ platform-verification-app/
    ```bash
    node server.js
 
-**🔴 .gitignore (Important!)**
-
-  Make sure you have a .gitignore file in your project root with:
-   ```bash
-    node_modules
-    .env
-
 ---
+## 🔴 .gitignore (Important!)
 
-## 🛠️ Tech Stack
-- **Backend:** Node.js, Express  
-- **Frontend:** HTML, CSS, JavaScript (inside `public/`)  
-- **Security Check:** TLS/SSL validation  
+Make sure you have a `.gitignore` file in your project root with:
 
----
+```bash
+node_modules
+.env
 
-## 📸 Screenshots
-- **Homepage**  
-- **Verification Result**  
-
-*(Add your own screenshots in a `screenshots/` folder and update paths here.)*  
-
----
-
-## 🙌 Contributing
-Pull requests are welcome.  
-For major changes, please open an issue first to discuss what you would like to change.  
-
----
-
-## 📜 License
-This project is licensed under the **MIT License**.  
-Feel free to use and modify it for your own projects! 🚀
