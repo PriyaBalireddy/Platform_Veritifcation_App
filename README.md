@@ -16,17 +16,12 @@ The app validates SSL certificate details such as issuer, organization name, exp
 
 ## 📂 Project Structure
 platform-verification-app/
-
-│── node_modules/ # Ignored by git
-
-│── .gitignore # Prevents node_modules and env files from being pushed
-
-│── package.json # Dependencies and scripts
-
-│── server.js # Main application file
-
-│── README.md # Project documentation
-
+├── public/
+│ └── index.html # Frontend (UI)
+├── server.js # Backend (Express server)
+├── package.json # Project metadata & dependencies
+├── .gitignore # Ignored files/folders
+└── README.md # Project documentation
 
 ---
 
