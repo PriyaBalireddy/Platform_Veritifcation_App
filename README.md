@@ -37,15 +37,15 @@ platform-verification-app/
    ```bash
    git clone https://github.com/your-username/platform-verification-app.git
    cd platform-verification-app
-1. **Clone the repository**
+2. **Install Dependencies**
    ```bash
-   git clone https://github.com/your-username/platform-verification-app.git
-   cd platform-verification-app
-1. **Clone the repository**
+   node install
+3. **Run the app**
    ```bash
-   git clone https://github.com/your-username/platform-verification-app.git
-   cd platform-verification-app
-1. **Clone the repository**
+   npm server.js
+**🔴 .gitignore (Important!)**
+Make sure you have a .gitignore file in your project root with:
    ```bash
-   git clone https://github.com/your-username/platform-verification-app.git
-   cd platform-verification-app
+   node_modules
+   .env
+
