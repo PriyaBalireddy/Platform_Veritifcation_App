@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SSL Certificate Checker</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: flex-start;   /* align at top */
+  height: 100vh;
+  margin: 0;
+  overflow-y: auto;          /* enable scrolling if content grows */
+  padding-top: 20px;         /* little space from top */
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 420px;
+  max-width: 90%;
+  text-align: center;
+}
+
+    
+    input {
+      padding: 6px;
+      width: 80%;
+      margin-bottom: 10px;
+    }
+   .buttons {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 8px; /* spacing between buttons */
+  align-items: center;
+  margin-top: 12px;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff; /* blue */
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3; /* darker blue on hover */
+}
+
+    #result, #about {
+      margin-top: 15px;
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      display: none;
+    }
+    .icon {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔍 Educational Platform Verification</h2>
+    <input type="text" id="urlInput" placeholder="Enter website (example.com)">
+    <button onclick="checkSSL()">Check</button>
+    <button onclick="toggleAbout()">About SSL</button>
+
+    <div id="result"></div>
+    <div id="about">
+      <h3>🔐 About SSL</h3>
+      <ul>
+        <li>🔒 SSL (Secure Sockets Layer) encrypts data between your browser and the website.</li>
+        <li>✅ Ensures privacy and data protection.</li>
+        <li>🌍 Builds trust by showing a padlock in the browser.</li>
+        <li>📜 Provides certificate info like validity and issuer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    async function checkSSL() {
+      const url = document.getElementById("urlInput").value.trim();
+      if (!url) return alert("Enter a website URL");
+
+      const res = await fetch(`/check?url=${url}`);
+      const data = await res.json();
+
+      let output = `<p><strong>Organisation:</strong> ${data.organisation}</p>`;
+      if (data.issuer) {
+        output += `<p><strong>Issuer:</strong> ${data.issuer}</p>`;
+      }
+      if (data.validFrom) {
+        output += `<p><strong>Valid From:</strong> ${data.validFrom}</p>`;
+      }
+      if (data.expiry) {
+        output += `<p><strong>Expiry Date:</strong> ${data.expiry}</p>`;
+      }
+      if (data.daysRemaining !== undefined) {
+        output += `<p><strong>Days Remaining:</strong> ${data.daysRemaining}</p>`;
+      }
+      output += `<p><strong>Status:</strong> ${data.status}</p>`;
+
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").style.display = "block";
+    }
+
+    function toggleAbout() {
+      let aboutBox = document.getElementById("about");
+      aboutBox.style.display = aboutBox.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
