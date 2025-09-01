@@ -29,42 +29,44 @@ Built with **React.js**, **Node.js**, and **Express.js**.
 git clone https://github.com/your-username/platform-verification-app.git
 cd platform-verification-app
 
-2. Install dependencies
+**### 2. Install dependencies**
 
 For backend:
-
+```bash
 cd backend
 npm install
 
 
 For frontend:
-
+```bash
 cd frontend
 npm install
 
 3. Run the app
 
 Start backend:
-
+```bash
 cd backend
 npm start
 
 
 Start frontend:
-
+```bash
 cd frontend
 npm start
 
 🔗 API Usage
-Endpoint: /check
+Endpoint:
+```bash
+/check
 
 Request:
-
+```bash
 GET /check?url=example.com
 
 
 Response Example:
-
+```bash
 {
   "host": "example.com",
   "valid": true,
