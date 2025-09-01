@@ -16,10 +16,15 @@ The app validates SSL certificate details such as issuer, organization name, exp
 
 ## 📂 Project Structure
 platform-verification-app/
+
 │── node_modules/ # Ignored by git
+
 │── .gitignore # Prevents node_modules and env files from being pushed
+
 │── package.json # Dependencies and scripts
+
 │── server.js # Main application file
+
 │── README.md # Project documentation
 
 
@@ -33,14 +38,15 @@ platform-verification-app/
    cd platform-verification-app
 2.**Install dependencies**
    ```bash
-   npm install
-3.**Run the app**
+    npm install
+3. **Run the app**
    ```bash
-  node server.js
+   node server.js
 
-**🛑 .gitignore (Important!)**
+## 🛑 .gitignore (Important!)
 
-Make sure you have a .gitignore file in your project root with:
-```bash
-node_modules
-.env
+   Make sure you have a .gitignore file in your project root with:
+
+   ```bash
+   node_modules
+   .env
